@@ -1,0 +1,141 @@
+.PlayBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+
+  background: linear-gradient(45deg, #d2001a, #7462ff, #fa8e21, #23d5ab);
+  background-size: 300% 300%;
+  animation: BgColor 12s ease-in-out infinite;
+  height: 100%;
+}
+@keyframes BgColor {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.PlayBtn .Text h1,
+.Text h2 {
+  transform: rotate(-5deg);
+  font-size: 6rem;
+  text-shadow: 2px 3px 7px #000052, 2px 3px 10px #000052, 2px 3px 7px #000052,
+    2px 3px 7px #000052, 2px 3px 10px #000052, 2px 3px 7px #000052,
+    2px 3px 10px #000052, 2px 3px 10px #000052;
+  letter-spacing: 8px;
+}
+.PlayBtn .Text {
+  text-align: center;
+  width: auto;
+  animation: textMove 4s ease-in-out infinite;
+}
+
+@keyframes textMove {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.PlayBtn button a {
+  text-decoration: none;
+  color: white;
+}
+.PlayBtn button :hover {
+}
+.PlayBtn button {
+  position: relative;
+  background-color: #4e4298;
+  height: 3rem;
+  width: 12rem;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+.LightEffect {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.Light1,
+.Light2 {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  border-bottom: 98rem solid white;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  opacity: 0.2;
+  transform: translate(10%);
+}
+
+.Light1 {
+  transform: rotate(150deg);
+  left: 50rem;
+  animation: moveLight1 3s infinite;
+}
+
+.Light2 {
+  transform: rotate(-150deg);
+  right: 50rem;
+  animation: moveLight2 3s infinite;
+}
+
+@keyframes moveLight1 {
+  0% {
+    transform: rotate(100deg);
+  }
+  25% {
+    transform: rotate(120deg);
+  }
+  50% {
+    transform: rotate(150deg);
+  }
+  75% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(100deg);
+  }
+}
+
+@keyframes moveLight2 {
+  0% {
+    transform: rotate(-100deg);
+  }
+  25% {
+    transform: rotate(-120deg);
+  }
+  50% {
+    transform: rotate(-150deg);
+  }
+  75% {
+    transform: rotate(-180deg);
+  }
+
+  100% {
+    transform: rotate(-100deg);
+  }
+}
